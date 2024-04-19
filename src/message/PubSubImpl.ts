@@ -98,7 +98,7 @@ class PubSubImpl implements PubSub {
 			return;
 		}
 
-		this.logger.trace("Enabling global");
+		this.logger?.trace("Enabling global");
 
 		for (const listener of this.listeners) {
 			this.module.tell("addListener", listener);
@@ -112,7 +112,7 @@ class PubSubImpl implements PubSub {
 			return;
 		}
 
-		this.logger.trace("Disabling global");
+		this.logger?.trace("Disabling global");
 
 		for (const listener of this.listeners) {
 			this.module.tell("removeListener", listener);
