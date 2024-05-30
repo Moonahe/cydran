@@ -234,7 +234,7 @@ class StageImpl implements Stage {
 		const fn: BehaviorFunction = (el: HTMLInputElement) => isDefined(el.type) && el.type.toLowerCase() === "radio" ? RadioModelBehavior : ValuedModelBehavior;
 		const registry: BehaviorsRegistry = this.cydranContext.getBehaviorsRegistry();
 		registry.register("model", ["textarea"], ValuedModelBehavior);
-		registry.registerFunction("model", ["input"], fn);
+		registry.registerFunction("model", ["input","wi-dropdown"], fn);
 		registry.register("model", ["select"], MultiSelectValueModelBehavior);
 		registry.register("required", ["input", "select", "textarea"], RequiredBehavior);
 		registry.register("style", ["*"], StyleBehavior);
